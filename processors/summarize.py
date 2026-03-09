@@ -31,7 +31,7 @@ highlights は重要度の高い記事を最大3件選んでください。
 
 def summarize_articles(articles: list[dict]) -> dict:
     genai.configure(api_key=os.environ["GEMINI_API_KEY"])
-    model = genai.GenerativeModel("gemini-1.5-flash")
+    model = genai.GenerativeModel("gemini-2.0-flash")
 
     # 記事をテキスト化（トークン節約のためsummaryは300字以内）
     lines = []
