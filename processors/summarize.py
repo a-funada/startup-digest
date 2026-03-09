@@ -1,7 +1,8 @@
+import os
 from groq import Groq
 
 def summarize_articles(articles):
-    client = Groq()
+    client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
     
     texts = []
     for a in articles:
