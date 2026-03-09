@@ -15,4 +15,10 @@ def summarize_articles(articles):
         model="llama-3.3-70b-versatile",
     )
     
-    return chat_completion.choices[0].message.content
+    summary_text = chat_completion.choices[0].message.content
+    
+    return {
+        "categories": {
+            "スタートアップニュース": summary_text
+        }
+    }
