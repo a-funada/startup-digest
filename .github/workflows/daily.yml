@@ -1,8 +1,6 @@
 name: Daily Startup Digest
 
 on:
-  schedule:
-    - cron: '0 22 * * *'   # UTC 22:00 = JST 翌7:00
   workflow_dispatch:         # GitHub画面から手動実行も可能
 
 jobs:
